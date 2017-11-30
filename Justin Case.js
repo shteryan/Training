@@ -1,25 +1,37 @@
-resolveTime = 100;
-rejectTime = 50;
+//resolveTime = 100;
+//rejectTime = 150;
 
-let thePromise = new Promise(function (resolve, reject) {
-    //console.log("start RESolving");
-    /*setTimeout(function () {
-        resolve("Черешки")
-    }, resolveTime);*/
+//console.log('before the promise');
 
-    //console.log("start REJecting");
-    /*setTimeout(function () {
-        reject("Слаба реколта")
-    }, rejectTime);*/
+let thePromise = new Promise((resolve, reject) => {
+
+    //Hokus pokus, computer magic!
+
 });
 
-/*setTimeout(function () {
-    console.log("DONE reJECTing");
-}, rejectTime);*/
+//console.log('after promise');
 
-/*setTimeout(function () {
-    console.log("DONE reSOLVing");
-}, resolveTime);*/
+/*
+setTimeout(() => console.log('DONE reSOLVing'), resolveTime);
+setTimeout(() => console.log('DONE reJECTing'), rejectTime);
+*/
 
-thePromise.then((result) => console.log(`Виж ни! Вишни, ${result}!`))
-    .catch((error) => console.log(`Error type: ${error}`));
+
+/*
+thePromise.then((result) => console.log(`Yipikayay, ${result}`))
+    .catch((reject) => console.log(`Error: ${reject}`));
+    */
+
+
+/*
+thePromise.then(function(result) {
+    return 'Enough is enough! I have had it with this ' + result;
+})
+    .then(function(newResult) {
+        return newResult + ' snakes on this monday to Friday train. ';
+    })
+    .then(function(finalResult) {
+        console.log(finalResult + "I'm about to open some windows");
+    })
+    .catch((reject) => console.log(`Error: ${reject}`));
+    */
