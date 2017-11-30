@@ -1,29 +1,29 @@
-//resolveTime = 100;
-//rejectTime = 150;
+resolveTime = 100;
+rejectTime = 150;
 
-//console.log('before the promise');
+console.log('before the promise');
 
 let thePromise = new Promise((resolve, reject) => {
 
-    //Hokus pokus, computer magic!
+    setTimeout(() => resolve('monkey fighting'), resolveTime);
+    setTimeout(() => reject('Not a flapping duck given'), rejectTime);
 
 });
 
-//console.log('after promise');
+console.log('after promise');
 
-/*
+
 setTimeout(() => console.log('DONE reSOLVing'), resolveTime);
 setTimeout(() => console.log('DONE reJECTing'), rejectTime);
-*/
 
 
-/*
+
 thePromise.then((result) => console.log(`Yipikayay, ${result}`))
     .catch((reject) => console.log(`Error: ${reject}`));
-    */
 
 
-/*
+
+
 thePromise.then(function(result) {
     return 'Enough is enough! I have had it with this ' + result;
 })
@@ -34,4 +34,3 @@ thePromise.then(function(result) {
         console.log(finalResult + "I'm about to open some windows");
     })
     .catch((reject) => console.log(`Error: ${reject}`));
-    */
